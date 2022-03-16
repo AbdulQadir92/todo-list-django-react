@@ -133,7 +133,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'todo-list-react/build/static')
+    os.path.join(BASE_DIR, 'todo-list-react/build/static/')
 ]
 
 # Default primary key field type
