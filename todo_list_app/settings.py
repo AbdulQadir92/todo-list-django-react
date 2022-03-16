@@ -24,9 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-5q(gzuar8-@4z#cu(8%gw$_gzzqc^4-(%gl2b8fiau8+42w5q_'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['todo-list-django-react-app.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
@@ -86,6 +86,12 @@ DATABASES = {
         'HOST': 'localhost'
     }
 }
+
+
+import dj_database_url
+
+db_from_env = dj_database_url.config(conn_max_age=600)
+DATABASES['default'].update(db_from_env)
 
 
 # Password validation
